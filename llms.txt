@@ -1,9 +1,9 @@
 # Konstantinos Kousouris
 
-> eToro Popular Investor (Elite, username Le_kousou) and entrepreneur from Thessaloniki, Greece. Forbes 30 Under 30 Greece 2024. Long-only global stock portfolio copied by 2129 investors in 63 countries (BullAware, 2026-10-20).
+> eToro Popular Investor (Elite, username Le_kousou) and entrepreneur from Thessaloniki, Greece. Forbes 30 Under 30 Greece 2024. Long-only global stock portfolio copied by 2120 investors in 63 countries (BullAware, 2026-10-21).
 
 ## Key facts
-- Return since January 2023: 153.8% (S&P 500 price index: 106.7%). Five years (2021-11 to 2026-10): 93.0%. Portfolio launched 2021-6.
+- Return since January 2023: 153.8% (S&P 500 price index: 100.0%). Five years (2021-11 to 2026-10): 93.0%. Portfolio launched 2021-6.
 - Calendar years: 2023: 25.2%, 2024: 33.4%, 2025: 31.2%, 2026: 15.9% (2026 year to date).
 - BullAware score, last 3 years: 8.9/10. eToro risk score: 4/10. Assets under copy: about $2.6M (eToro, 2026-10-21).
 - Ventures: Blinko AI (co-founder and CEO, 2022 to 2025, Startupbootcamp Amsterdam 2024), Blue Banana (co-founder, beach bar inside the Aristotle University student camping, Halkidiki), Innovation Academy (founder, entrepreneurship education), LK Index (11-criterion research framework). Entrepreneurship lecturer at Mediterranean College.
@@ -19,6 +19,21 @@
 - [Recognition and media](https://kkonstantinos.com/recognition.html): Forbes 30 Under 30 Greece, Study UK Alumni Awards, Cardiff University 30(ish) Awards, GSEA, plus interviews, podcasts, TV and press featuring Konstantinos Kousouris.
 - [Work with Konstantinos](https://kkonstantinos.com/collaborate.html): Talks and keynotes, interviews, brand partnerships, founder mentoring, workshops and copy trading. Book a free 15-minute call.
 - Greek: https://kkonstantinos.com/el/index.html · Spanish: https://kkonstantinos.com/es/index.html
+- Full text of every page: https://kkonstantinos.com/llms-full.txt
+
+## Talks and mentoring
+- CYF Congress 2026 (2026): Speaker at Create Your Future, the student congress on youth entrepreneurship at the Vellideio Conference Centre, Thessaloniki, 24 and 25 April 2026. Talk: what separates "I want to" from "it happens".
+- Techstars Startup Weekend Thessaloniki (2025): Mentor to the teams building a startup in 54 hours, 5 to 7 December 2025, at the Region of Central Macedonia.
+- TNW Conference, Amsterdam (2024): On stage at one of Europe's largest tech conferences, presenting Blink with Startupbootcamp's Inclusive FinTech & DeFi cohort.
+- Creative+ · Panteion University (2024): Startup inspiration by the view of a co-founder: an open talk for students, 8 March 2024, in the series Innovation stories that inspire us.
+- Foundit by Bizrupt, Crete: Speaker at the 26th cycle of Foundit, the founder program of the Bizrupt community in Crete, on building and funding a startup.
+- GSEA Greece (2025): Mentor of the student founder who placed second nationally; silver mentor award.
+- Success Stories · Innovation Academy (2025): Organiser and host of the founder stories event in Thessaloniki, December 2025.
+- WMF x Bologna Tech Week (2024): Panel on fintech in Southern Europe, December 2024.
+- EO Greece x GSEA youth event (2024): Co-organiser of a sold-out youth entrepreneurship event with the Entrepreneurs' Organization.
+- VentureGarden Thessaloniki: Mentor to early-stage founders in the VentureGarden entrepreneurship program.
+- EquityMatch Pitch Events · Europe (2023): Pitched Blink live to investors, December 2023.
+- Mediterranean College: Entrepreneurship lecturer: I teach business students with cases from my own companies.
 
 ## Disclaimers
 - Copy Trading does not amount to investment advice. Your investments value may go up or down. Your capital is at risk.
