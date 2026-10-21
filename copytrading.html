@@ -1,0 +1,754 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Copy trading, explained · Konstantinos Kousouris</title><meta name="description" content="What copy trading on eToro is, how copying Konstantinos Kousouris works, what it costs, the risks, and a quiz to see whether this investing style fits you."><meta name="robots" content="index,follow"><link rel="canonical" href="https://kkonstantinos.com/copytrading.html"><link rel="alternate" hreflang="en" href="https://kkonstantinos.com/copytrading.html"><link rel="alternate" hreflang="el" href="https://kkonstantinos.com/el/copytrading.html"><link rel="alternate" hreflang="es" href="https://kkonstantinos.com/es/copytrading.html"><link rel="alternate" hreflang="x-default" href="https://kkonstantinos.com/copytrading.html"><meta property="og:type" content="website"><meta property="og:title" content="Copy trading, explained · Konstantinos Kousouris"><meta property="og:description" content="What copy trading on eToro is, how copying Konstantinos Kousouris works, what it costs, the risks, and a quiz to see whether this investing style fits you."><meta property="og:url" content="https://kkonstantinos.com/copytrading.html"><meta property="og:image" content="https://kkonstantinos.com/img/hero.webp"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Sofia+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Sofia+Sans+Extra+Condensed:wght@700;800&display=swap"><style>/* Layout: a deep-space observatory. Instrument panels float on a faint star grid; the real compounding line of the portfolio is the one luminous signature. */
+:root{
+  color-scheme:dark;
+  --bg:#05070D; --surface:#0C1220; --surface-2:#111A2E; --line:#1E2A44; --line-2:#2B3A5C;
+  --fg:#EAF0FA; --fg-2:#B4BFD4; --muted:#7D8AA5;
+  --accent:#6F86F2; --accent-text:#A9B7FF; --accent-bg:#8FA2FF; --on-accent:#060912;
+  --pos:#1FAE6E; --pos-text:#4BE3A0; --neg:#E5534B; --neg-text:#FF8A80; --warn:#F5B841;
+  --bench:#5E6A84; --glow:rgba(111,134,242,.30); --glow-2:rgba(31,174,110,.12); --grid:rgba(169,183,255,.07);
+  --glass:rgba(12,18,32,.72); --shadow:0 20px 60px -30px rgba(0,0,0,.8);
+  --f-display:"Sofia Sans Extra Condensed","Sofia Sans","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:18px; --r-sm:12px; --maxw:1200px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    color-scheme:light;
+    --bg:#F3F5FA; --surface:#FFFFFF; --surface-2:#EDF1F8; --line:#DCE3EF; --line-2:#C5CFE2;
+    --fg:#0B1222; --fg-2:#3E4A63; --muted:#5E6A84;
+    --accent:#3D4FE0; --accent-text:#3346D3; --accent-bg:#3D4FE0; --on-accent:#FFFFFF;
+    --pos:#0E8F5A; --pos-text:#0B7A4B; --neg:#C93C3C; --neg-text:#B42F2F; --warn:#B7791F;
+    --bench:#8A94A8; --glow:rgba(61,79,224,.14); --glow-2:rgba(14,143,90,.08); --grid:rgba(51,70,211,.08);
+    --glass:rgba(255,255,255,.78); --shadow:0 20px 60px -34px rgba(20,30,60,.35);
+  }
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#F3F5FA; --surface:#FFFFFF; --surface-2:#EDF1F8; --line:#DCE3EF; --line-2:#C5CFE2;
+  --fg:#0B1222; --fg-2:#3E4A63; --muted:#5E6A84;
+  --accent:#3D4FE0; --accent-text:#3346D3; --accent-bg:#3D4FE0; --on-accent:#FFFFFF;
+  --pos:#0E8F5A; --pos-text:#0B7A4B; --neg:#C93C3C; --neg-text:#B42F2F; --warn:#B7791F;
+  --bench:#8A94A8; --glow:rgba(61,79,224,.14); --glow-2:rgba(14,143,90,.08); --grid:rgba(51,70,211,.08);
+  --glass:rgba(255,255,255,.78); --shadow:0 20px 60px -34px rgba(20,30,60,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:radial-gradient(1100px 620px at 85% -8%,var(--glow),transparent 62%),radial-gradient(900px 520px at -12% 34%,var(--glow-2),transparent 60%),var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(var(--grid) 1px,transparent 1.2px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.35) 60%,transparent 100%);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.35) 60%,transparent 100%);z-index:0}
+a{color:var(--accent-text);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent-text);outline-offset:3px;border-radius:6px}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(16px,4vw,40px);position:relative;z-index:1}
+section{padding-block:clamp(56px,9vw,112px);position:relative}
+.eyebrow{font:600 12px/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);display:inline-flex;align-items:center;gap:10px;margin:0 0 14px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent)}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font:800 clamp(38px,5.6vw,68px)/.95 var(--f-display);letter-spacing:.005em;text-transform:uppercase}
+h3{font:700 21px/1.25 var(--f-body)}
+.lede{font-size:clamp(17px,1.6vw,19px);color:var(--fg-2);max-width:66ch;margin:18px 0 0}
+.muted{color:var(--muted)}
+.mono{font-family:var(--f-mono)}
+.small{font-size:14px;line-height:1.55}
+.tiny{font-size:12.5px;line-height:1.5}
+.pos{color:var(--pos-text)} .neg{color:var(--neg-text)}
+.head{display:grid;gap:4px;margin-bottom:clamp(28px,4vw,44px)}
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pad{padding:clamp(18px,2.6vw,28px)}
+.grid{display:grid;gap:clamp(14px,2vw,22px)}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:980px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.g2,.g3,.g4{grid-template-columns:minmax(0,1fr)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font:700 16px/1 var(--f-body);border:1px solid var(--line-2);color:var(--fg);background:transparent;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{text-decoration:none;border-color:var(--accent-text);transform:translateY(-1px)}
+.btn.primary{background:var(--accent-bg);border-color:var(--accent-bg);color:var(--on-accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn .arr{font-family:var(--f-mono);font-weight:400}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);font:600 12px/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--pos)}
+.riskline{font:500 12.5px/1.5 var(--f-mono);color:var(--fg-2);border-left:2px solid var(--warn);padding:6px 0 6px 12px;margin-top:16px;max-width:72ch}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;min-height:68px}
+.mark{display:inline-flex;align-items:center;gap:10px;color:var(--fg);font:800 22px/1 var(--f-display);letter-spacing:.06em}
+.mark:hover{text-decoration:none}
+.mark i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-2);font-style:normal;font-size:17px;background:radial-gradient(circle at 30% 30%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 70%)}
+.nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav a{color:var(--fg-2);font:600 14px/1 var(--f-body);padding:10px 10px;border-radius:999px}
+.nav a:hover{color:var(--fg);background:var(--surface-2);text-decoration:none}
+.langs{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px}
+.langs button{all:unset;cursor:pointer;font:600 12px/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);padding:8px 9px;border-radius:999px}
+.langs button[aria-pressed="true"]{background:var(--accent-bg);color:var(--on-accent)}
+.langs button:focus-visible{outline:2px solid var(--accent-text)}
+.menu-btn{display:none}
+@media (max-width:1080px){.nav{display:none}.menu-btn{display:inline-flex;margin-left:auto;min-height:40px;padding:0 14px;font-size:14px}.top .book{display:none}}
+.mnav{display:none;border-top:1px solid var(--line)}
+.mnav.open{display:block}
+.mnav .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding-block:12px}
+.mnav a{color:var(--fg);padding:12px;border-radius:12px;font-weight:600;background:var(--surface-2)}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,72px) clamp(28px,4vw,48px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,4vw,56px);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hero-trail{position:absolute;inset:auto 0 0 0;height:78%;z-index:0;pointer-events:none;opacity:.55}
+.hero-trail path.l{fill:none;stroke:var(--accent);stroke-width:2.2;filter:drop-shadow(0 0 6px var(--glow))}
+.hero-trail path.a{fill:url(#trailfill)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.name{font:800 clamp(58px,10.6vw,150px)/.84 var(--f-display);text-transform:uppercase;letter-spacing:.004em;margin:0}
+.name span{display:block}
+.name span:last-child{color:transparent;-webkit-text-stroke:1.5px var(--fg);text-stroke:1.5px var(--fg)}
+@supports not (-webkit-text-stroke:1px black){.name span:last-child{color:var(--fg-2)}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.lens{position:relative;width:min(100%,420px);aspect-ratio:1;margin-inline:auto}
+.lens .ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 62%,var(--accent) 78%,var(--pos) 88%,transparent 96%);-webkit-mask:radial-gradient(circle,transparent 66.5%,#000 67%,#000 68.2%,transparent 68.6%);mask:radial-gradient(circle,transparent 66.5%,#000 67%,#000 68.2%,transparent 68.6%);animation:spin 18s linear infinite}
+.lens .orbit{position:absolute;inset:6%;border-radius:50%;border:1px dashed var(--line-2)}
+.lens img{position:absolute;inset:15%;width:70%;height:70%;object-fit:cover;border-radius:50%;border:1px solid var(--line-2);box-shadow:0 0 0 10px color-mix(in srgb,var(--surface) 60%,transparent),0 30px 80px -30px var(--glow)}
+.lens .tag{position:absolute;display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:14px;background:var(--glass);border:1px solid var(--line-2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:600 11px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);box-shadow:var(--shadow)}
+.lens .tag b{font:800 26px/1 var(--f-display);letter-spacing:.01em;color:var(--fg);text-transform:none}
+.lens .t1{top:6%;right:-2%}.lens .t2{bottom:12%;left:-4%}.lens .t3{bottom:-2%;right:8%}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.lens .ring{animation:none}}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:clamp(32px,5vw,56px)}
+.kpi{padding:22px clamp(14px,2vw,26px);border-left:1px solid var(--line)}
+.kpi:first-child{border-left:0}
+.kpi .v{font:800 clamp(46px,5.6vw,76px)/.9 var(--f-display);letter-spacing:.005em;display:flex;align-items:baseline;gap:6px}
+.kpi .v small{font-size:.42em;color:var(--muted);font-weight:700}
+.kpi .l{font-weight:700;margin-top:10px}
+.kpi .s{font-size:14px;color:var(--muted);margin-top:2px}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi:nth-child(3){border-left:0}.kpi:nth-child(n+3){border-top:1px solid var(--line)}}
+.asof{font:500 12px/1.5 var(--f-mono);color:var(--muted);margin-top:14px}
+
+/* ticker */
+.ticker{border-block:1px solid var(--line);background:color-mix(in srgb,var(--surface) 65%,transparent);overflow:hidden;position:relative;z-index:1}
+.ticker .track{display:flex;width:max-content;animation:tick 60s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker ul{display:flex;list-style:none;margin:0;padding:0}
+.ticker li{font:600 13px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-2);padding:18px 26px;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.ticker li::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--line-2);margin-left:26px}
+.ticker li b{color:var(--fg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.ticker .track{animation:none;flex-wrap:wrap;width:auto}.ticker ul[aria-hidden]{display:none}}
+
+/* featured */
+.press{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.press a{display:flex;align-items:center;justify-content:center;text-align:center;min-height:86px;padding:14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:800 clamp(18px,2vw,23px)/1 var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2);background:color-mix(in srgb,var(--surface) 55%,transparent);transition:color .2s,background .2s}
+.press a:hover{color:var(--fg);background:var(--surface-2);text-decoration:none}
+.press a small{display:block;font:500 10px/1.3 var(--f-mono);letter-spacing:.1em;color:var(--muted);margin-top:6px}
+.press a:nth-child(5n){border-right:0}
+.press a:nth-last-child(-n+5){border-bottom:0}
+@media (max-width:900px){.press{grid-template-columns:repeat(2,minmax(0,1fr))}.press a:nth-child(5n){border-right:1px solid var(--line)}.press a:nth-child(2n){border-right:0}.press a:nth-last-child(-n+5){border-bottom:1px solid var(--line)}.press a:nth-last-child(-n+2){border-bottom:0}}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(18px,2.6vw,26px)}
+.proof div{padding:18px 20px;border-radius:var(--r-sm);border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 60%,transparent)}
+.proof b{display:block;font:800 clamp(34px,4vw,48px)/1 var(--f-display);color:var(--fg)}
+.proof span{color:var(--fg-2);font-size:15px}
+@media (max-width:760px){.proof{grid-template-columns:minmax(0,1fr)}}
+
+/* stats + charts */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{padding:18px 20px;border-radius:var(--r-sm);border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.stat .l{font:600 11.5px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stat .v{font:800 clamp(36px,4vw,52px)/1 var(--f-display);margin-top:10px}
+.stat .s{font-size:14px;color:var(--muted);margin-top:4px}
+.chart-card{margin-top:clamp(14px,2vw,22px)}
+.chart-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;align-items:flex-end;margin-bottom:14px}
+.chart-head p{margin:4px 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--fg-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:18px;height:3px;border-radius:2px}
+.legend i.box{width:12px;height:12px;border-radius:3px}
+.chart{position:relative;width:100%;min-height:200px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{fill:var(--muted);font:500 11.5px var(--f-mono)}
+.chart .gl{stroke:var(--line);stroke-width:1;shape-rendering:crispEdges}
+.chart .base{stroke:var(--line-2);stroke-width:1;shape-rendering:crispEdges}
+.chart .xh{stroke:var(--fg-2);stroke-width:1;opacity:.45}
+.chart .lab{fill:var(--fg);font:700 12.5px var(--f-mono)}
+.tip{position:fixed;z-index:80;pointer-events:none;min-width:150px;padding:10px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line-2);box-shadow:var(--shadow);font:500 12.5px/1.45 var(--f-body);color:var(--fg-2);opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s}
+.tip.on{opacity:1;transform:none}
+.tip .h{font:600 11px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tip .r{display:flex;align-items:center;gap:8px}
+.tip .r b{color:var(--fg);font-size:15px;font-weight:700}
+.tip .r i{display:inline-block;width:14px;height:3px;border-radius:2px}
+details.tbl{margin-top:12px}
+details.tbl summary{cursor:pointer;font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);padding:8px 0;width:max-content}
+.tscroll{overflow-x:auto}
+table.data{border-collapse:collapse;width:100%;font:500 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums}
+table.data th,table.data td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+table.data th:first-child,table.data td:first-child{text-align:left}
+table.data th{color:var(--muted);font-weight:600}
+.heat{width:100%;border-collapse:separate;border-spacing:3px;font:600 12.5px/1 var(--f-mono);font-variant-numeric:tabular-nums}
+.heat th{color:var(--muted);font-weight:600;padding:6px 2px;text-align:center}
+.heat th.y{text-align:left;padding-right:8px;color:var(--fg-2)}
+.heat td{height:46px;text-align:center;border-radius:8px;color:var(--fg);min-width:44px;cursor:default}
+.heat td.na{background:transparent;border:1px dashed var(--line)}
+.heat td.tot{font-weight:800;border:1px solid var(--line-2)}
+@media (max-width:700px){.heat td{height:38px;min-width:40px;font-size:11px}}
+.long{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 26px;align-items:center;border-left:3px solid var(--pos)}
+.long .big{font:800 clamp(44px,5vw,64px)/1 var(--f-display)}
+@media (max-width:640px){.long{grid-template-columns:minmax(0,1fr)}}
+.links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:12px;font-weight:700}
+
+/* score */
+.score{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,3vw,40px);align-items:center}
+@media (max-width:900px){.score{grid-template-columns:minmax(0,1fr)}}
+.dial{position:relative;width:min(100%,300px);aspect-ratio:1;margin-inline:auto}
+.dial svg{width:100%;height:100%}
+.dial .c{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.dial .c b{font:800 clamp(64px,8vw,92px)/.9 var(--f-display)}
+.dial .c span{font:600 12px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.wins{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,18px);margin-top:clamp(20px,3vw,32px)}
+@media (max-width:1000px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.metrics{grid-template-columns:minmax(0,1fr)}}
+.metric{padding:18px;border-radius:var(--r-sm);border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 70%,transparent);display:flex;flex-direction:column;gap:10px}
+.metric .top2{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.metric .n{font:600 12px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2)}
+.metric .v{font:800 40px/1 var(--f-display)}
+.st{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.st.good{color:var(--pos-text)} .st.fair{color:var(--warn)} .st.weak{color:var(--neg-text)}
+.meter{position:relative;height:8px;border-radius:999px;display:flex;gap:2px;overflow:visible}
+.meter span{height:100%;border-radius:999px;opacity:.38}
+.meter span.r{background:var(--neg)} .meter span.y{background:var(--warn)} .meter span.g{background:var(--pos)}
+.meter b{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--fg);box-shadow:0 0 0 3px var(--surface)}
+.metric p{margin:0;font-size:14.5px;color:var(--fg-2)}
+.metric .good-at{font:500 12px/1.4 var(--f-mono);color:var(--muted)}
+
+/* principles */
+.prin{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)}
+@media (max-width:1000px){.prin{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.prin{grid-template-columns:minmax(0,1fr)}}
+.prin div{padding:18px;border-top:2px solid var(--accent);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 9%,transparent),transparent 70%);border-radius:0 0 var(--r-sm) var(--r-sm)}
+.prin h3{font-size:18px}
+.prin p{margin:8px 0 0;font-size:14.5px;color:var(--fg-2)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.5fr);gap:clamp(16px,2.4vw,28px)}
+@media (max-width:980px){.trust{grid-template-columns:minmax(0,1fr)}}
+.map svg{width:100%;height:auto;display:block}
+.map circle{transition:r .15s}
+.toplist{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-variant-numeric:tabular-nums}
+.toplist li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:center;font-size:14.5px}
+.toplist li i{grid-column:1 / -1;height:4px;border-radius:999px;background:var(--accent);opacity:.75}
+.toplist li b{font-family:var(--f-mono);font-size:13px}
+.ctx{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+.ctx .big{font:800 clamp(44px,5vw,64px)/1 var(--f-display);color:var(--accent-text)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)}
+@media (max-width:760px){.faq{grid-template-columns:minmax(0,1fr)}}
+.faq details{border:1px solid var(--line);border-radius:var(--r-sm);background:color-mix(in srgb,var(--surface) 70%,transparent);padding:4px 18px}
+.faq summary{cursor:pointer;list-style:none;padding:14px 0;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 22px/1 var(--f-mono);color:var(--accent-text)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 16px;color:var(--fg-2);font-size:15.5px}
+.cta-box{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 28px;align-items:center;margin-top:clamp(16px,2vw,22px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+@media (max-width:760px){.cta-box{grid-template-columns:minmax(0,1fr)}}
+
+/* media */
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
+@media (max-width:760px){.feat{grid-template-columns:minmax(0,1fr)}}
+.card{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:color-mix(in srgb,var(--surface) 72%,transparent);display:flex;flex-direction:column;min-width:0;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.sig{position:relative;aspect-ratio:16/7;background:radial-gradient(120% 140% at 0% 0%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 55%),linear-gradient(135deg,var(--surface-2),var(--surface));border-bottom:1px solid var(--line);overflow:hidden}
+.sig svg{position:absolute;inset:0;width:100%;height:100%}
+.sig svg rect{fill:var(--accent);opacity:.75}
+.sig .k{position:absolute;left:16px;top:14px;display:flex;gap:8px;flex-wrap:wrap}
+.sig .views{position:absolute;right:16px;bottom:12px;font:800 34px/1 var(--f-display);color:var(--fg);text-shadow:0 2px 14px var(--bg)}
+.sig .views small{font:600 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-2);margin-left:6px}
+.card .b{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .o{font:600 12px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text)}
+.card h3{font-size:19px}
+.card .meta{font:500 12.5px/1.4 var(--f-mono);color:var(--muted)}
+.card .acts{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:auto;padding-top:8px;font-weight:700;font-size:15px}
+.rows{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-sm);background:color-mix(in srgb,var(--surface) 65%,transparent)}
+.row .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line-2);color:var(--accent-text);font:700 13px var(--f-mono)}
+.row .t{min-width:0}
+.row .t b{display:block;font-size:16px;line-height:1.35}
+.row .t span{font:500 12.5px/1.4 var(--f-mono);color:var(--muted)}
+.row .acts{display:flex;gap:12px;font-weight:700;font-size:14.5px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:640px){.row{grid-template-columns:auto minmax(0,1fr)}.row .acts{grid-column:1 / -1;justify-content:flex-start}}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,36px)}
+@media (max-width:900px){.cols{grid-template-columns:minmax(0,1fr)}}
+.sub{font:800 clamp(24px,2.6vw,30px)/1 var(--f-display);text-transform:uppercase;letter-spacing:.02em;margin:clamp(30px,4vw,44px) 0 16px}
+.ph{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;background:var(--surface-2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:12px;bottom:12px;right:12px;font:600 11.5px/1.35 var(--f-mono);letter-spacing:.05em;color:#EAF0FA;background:rgba(5,7,13,.62);padding:7px 10px;border-radius:10px;width:fit-content;max-width:calc(100% - 24px)}
+figure{margin:0}
+
+/* ventures */
+.v-main{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:0;overflow:hidden}
+@media (max-width:900px){.v-main{grid-template-columns:minmax(0,1fr)}}
+.v-main .ph{border:0;border-radius:0;min-height:320px}
+.role{font:600 12px/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ticks{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.ticks li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px;font-size:15.5px;color:var(--fg-2)}
+.ticks li::before{content:"";width:8px;height:8px;margin-top:8px;border-radius:2px;background:var(--pos);transform:rotate(45deg)}
+.note{margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--surface-2);font-size:15px;color:var(--fg-2)}
+.vcard h3{font:800 32px/1 var(--f-display);text-transform:uppercase;letter-spacing:.02em}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.facts span{font:600 12.5px/1.2 var(--f-mono);padding:8px 10px;border-radius:10px;border:1px solid var(--line-2);color:var(--fg)}
+
+/* awards */
+.aw{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
+@media (max-width:1000px){.aw{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.aw{grid-template-columns:minmax(0,1fr)}}
+.aw .card .ph{border:0;border-radius:0;aspect-ratio:4/5;border-bottom:1px solid var(--line)}
+.aw .yr{font:800 15px/1 var(--f-mono);color:var(--accent-text)}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,18px);margin-top:clamp(14px,2vw,22px)}
+@media (max-width:900px){.mini{grid-template-columns:minmax(0,1fr)}}
+.mini div{padding:16px 18px;border-radius:var(--r-sm);border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 65%,transparent)}
+.mini b{display:block;font-size:16px}
+.mini span{font-size:14px;color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
+@media (max-width:760px){.svc{grid-template-columns:minmax(0,1fr)}}
+.svc .card{flex-direction:row}
+.svc .card .ph{border:0;border-radius:0;width:38%;min-height:100%;flex:none;border-right:1px solid var(--line)}
+@media (max-width:520px){.svc .card{flex-direction:column}.svc .card .ph{width:100%;aspect-ratio:16/9;border-right:0;border-bottom:1px solid var(--line)}}
+.price{font:800 22px/1 var(--f-display);letter-spacing:.04em;text-transform:uppercase}
+.price.free{color:var(--pos-text)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,44px);align-items:start}
+@media (max-width:900px){.about{grid-template-columns:minmax(0,1fr)}}
+.story p{color:var(--fg-2);font-size:18px;margin:0 0 14px;max-width:62ch}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:44px;top:6px;bottom:6px;width:1px;background:var(--line-2)}
+.tl li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:22px;padding:0 0 18px;position:relative}
+.tl li::before{content:"";position:absolute;left:40px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.tl b{font:800 18px/1.3 var(--f-mono);color:var(--fg)}
+.tl span{color:var(--fg-2);font-size:15.5px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(18px,3vw,36px);align-items:center}
+@media (max-width:900px){.contact{grid-template-columns:minmax(0,1fr)}}
+.email{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.email code{font:600 clamp(15px,1.9vw,19px)/1.3 var(--f-mono);padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line-2);user-select:all;overflow-wrap:anywhere;color:var(--fg)}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;position:relative;z-index:1;background:color-mix(in srgb,var(--bg) 85%,transparent)}
+.legal{display:grid;gap:10px;font-size:12.5px;line-height:1.55;color:var(--muted);max-width:110ch}
+.legal p{margin:0}
+.legal b{color:var(--fg-2)}
+
+/* Multi-page additions */
+.langs a{font:600 12px/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);padding:8px 9px;border-radius:999px;text-decoration:none}
+.langs a[aria-current="true"]{background:var(--accent-bg);color:var(--on-accent)}
+.langs a:hover{text-decoration:none;color:var(--fg)}
+.nav a[aria-current="page"]{color:var(--fg);background:var(--surface-2)}
+.phero{padding-block:clamp(40px,6vw,72px) clamp(8px,2vw,24px)}
+.phero .h2{font:800 clamp(40px,6.4vw,84px)/.92 var(--f-display);letter-spacing:.004em;text-transform:uppercase;margin:0}
+.ctasec{padding-block:clamp(16px,3vw,32px) clamp(56px,8vw,96px)}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}}
+.path{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border-radius:var(--r-sm);border:1px solid var(--line-2);background:var(--glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--fg);transition:border-color .2s,transform .2s}
+.path:hover{text-decoration:none;border-color:var(--accent-text);transform:translateY(-2px)}
+.path b{font:800 24px/1 var(--f-display);text-transform:uppercase;letter-spacing:.03em;display:flex;justify-content:space-between;gap:10px}
+.path b .arr{font:400 20px/1 var(--f-mono);color:var(--accent-text)}
+.path span{font-size:14.5px;color:var(--fg-2)}
+.hero .cta{margin-top:18px}
+.logos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.logos .lcell{grid-column:span 3}
+.logos .lcell{display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 22px;border:1px solid var(--line);border-radius:var(--r-sm);background:color-mix(in srgb,var(--surface) 60%,transparent);color:var(--fg);transition:border-color .2s,background .2s,transform .2s}
+.logos .lcell:hover{text-decoration:none;border-color:var(--line-2);background:var(--surface-2);transform:translateY(-2px)}
+.logos .lcell.big{grid-column:span 6;min-height:150px;padding:26px 34px;border-color:var(--line-2);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 10%,transparent),color-mix(in srgb,var(--surface) 60%,transparent))}
+.logos .lg{display:block;width:100%;max-width:200px;height:auto;max-height:40px;object-fit:contain;color:var(--fg)}
+.logos .big .lg{max-width:360px;max-height:64px}
+.logos .lg.sq{max-height:64px;width:auto}
+.logos .big .lg.sq{max-height:96px}
+.logos .wm{font:800 clamp(16px,1.7vw,20px)/1.1 var(--f-display);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-2);text-align:center}
+@media (max-width:980px){.logos{grid-template-columns:repeat(4,minmax(0,1fr))}.logos .lcell{grid-column:span 1}.logos .lcell.big{grid-column:span 2}}
+@media (max-width:560px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}.logos .lcell{grid-column:span 1;min-height:80px;padding:14px}.logos .lcell.big{grid-column:span 2}}
+.whycard{display:flex;flex-direction:column;gap:10px;color:var(--fg)}
+.whycard:hover{text-decoration:none;border-color:var(--accent-text)}
+.whycard p{margin:0;color:var(--fg-2);font-size:15.5px;flex:1}
+.whycard .more{font-weight:700;color:var(--accent-text)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,18px)}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{padding:22px;border-radius:var(--r);border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 70%,transparent);position:relative}
+.step b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent-bg);color:var(--on-accent);font:800 18px var(--f-display);margin-bottom:14px}
+.step h3{font-size:20px}
+.step p{margin:8px 0 0;color:var(--fg-2);font-size:15.5px}
+.quizbox{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.quizbox .note{max-width:60ch}
+.perks{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 28px;align-items:center}
+@media (max-width:760px){.perks{grid-template-columns:minmax(0,1fr)}}
+.amt{display:flex;flex-direction:column;gap:6px;font:600 11.5px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.amt input{font:700 18px/1 var(--f-mono);color:var(--fg);background:var(--surface-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 12px;width:150px;max-width:100%}
+.spxline{margin:12px 0 4px;padding:12px 14px;border-radius:12px;background:var(--surface-2);font-size:15.5px;color:var(--fg-2)}
+.spxline b{color:var(--fg)}
+.vcard2 .thumb{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.vcard2 .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.vcard2:hover .thumb img{transform:scale(1.03)}
+.vcard2 .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;display:grid;place-items:center;background:rgba(5,7,13,.72);color:#fff;font-size:20px;padding-left:4px;border:1px solid rgba(255,255,255,.3)}
+.vcard2 .k{position:absolute;left:12px;top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.vcard2 .views{position:absolute;right:12px;bottom:10px;font:800 30px/1 var(--f-display);color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+.vcard2 .views small{font:600 10px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;margin-left:6px;color:#EAF0FA}
+.row .ic{overflow:hidden;padding:0}
+.row .ic img{width:100%;height:100%;object-fit:cover}
+.fnav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:22px;font-weight:600}
+.scard .b .price{margin-bottom:2px}
+.svc .card .ph{aspect-ratio:auto}
+@media (max-width:520px){.svc .card .ph{aspect-ratio:16/9}}
+.heat th.y{white-space:nowrap}
+/* quiz */
+.quiz{display:grid;gap:18px;margin-top:22px}
+.qq{border:1px solid var(--line);border-radius:var(--r-sm);padding:16px 18px 18px;margin:0;background:color-mix(in srgb,var(--surface) 55%,transparent)}
+.qq legend{font:700 18px/1.3 var(--f-body);padding:0 6px;display:flex;gap:12px;align-items:baseline}
+.qq .qn{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent-bg);color:var(--on-accent);font:800 14px var(--f-display);flex:none}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+@media (max-width:640px){.opts{grid-template-columns:minmax(0,1fr)}}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid var(--line-2);border-radius:12px;cursor:pointer;font-size:15.5px;color:var(--fg-2);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent-text)}
+.opt input{margin:4px 0 0;accent-color:var(--accent);flex:none}
+.opt:has(input:checked){border-color:var(--accent-text);background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--fg)}
+.qfoot{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.qfoot .tiny{max-width:60ch}
+.qres{margin-top:20px;padding:22px;border-radius:var(--r);border:1px solid var(--line-2);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.qres p{color:var(--fg-2);max-width:70ch}
+.qtitle{font:800 clamp(30px,4vw,44px)/1 var(--f-display);text-transform:uppercase;margin:4px 0 12px}
+.qtitle.high{color:var(--pos-text)} .qtitle.mid{color:var(--warn)} .qtitle.low{color:var(--neg-text)}
+.qres .cta{margin-top:12px}
+.qq.missing{border-color:var(--neg)}
+/* projection */
+.proj summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+.proj summary::-webkit-details-marker{display:none}
+.proj[open] summary .btn::after{content:" ▲"}
+.pctl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 28px;align-items:start;margin:16px 0 10px}
+@media (max-width:760px){.pctl{grid-template-columns:minmax(0,1fr)}}
+.pgrp{display:grid;gap:8px}
+.pgrp .l{font:600 11.5px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pgrp .l b{color:var(--fg);font-size:14px}
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px;width:max-content}
+.seg button{all:unset;cursor:pointer;font:700 14px/1 var(--f-mono);color:var(--muted);padding:9px 14px;border-radius:999px}
+.seg button[aria-pressed="true"]{background:var(--accent-bg);color:var(--on-accent)}
+.seg button:focus-visible{outline:2px solid var(--accent-text)}
+input[type=range]{width:100%;max-width:420px;accent-color:var(--accent)}
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+.presets .chip{cursor:pointer;background:var(--surface-2)}
+.presets .chip:hover{border-color:var(--accent-text);color:var(--fg)}
+.row .ic.plogo{padding:6px;color:var(--fg);background:var(--surface-2)}
+.row .ic.plogo svg{width:100%;height:100%;display:block}
+.row .ic.plogo img{object-fit:contain}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://kkonstantinos.com/#person","name":"Konstantinos Kousouris","alternateName":"Κωνσταντίνος Κουσουρής","jobTitle":["Investor","Entrepreneur"],"description":"eToro Popular Investor (Elite), entrepreneur, Forbes 30 Under 30 Greece 2024.","nationality":"GR","homeLocation":{"@type":"Place","name":"Thessaloniki, Greece"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Cardiff University"},"award":["Forbes 30 Under 30 Greece 2024","Study UK Alumni Awards 2024, Global Finalist (Europe), Business and Innovation","Cardiff University 30(ish) Awards 2024, Entrepreneurship","GSEA Greece 2025, Silver (mentor)"],"sameAs":["https://www.linkedin.com/in/konstantinos-kousouris/","https://www.instagram.com/le_kousou/","https://www.youtube.com/@KonstantinosKousouris","https://www.etoro.com/people/le_kousou","https://kkonstantinos.com"],"url":"https://kkonstantinos.com/","image":"https://kkonstantinos.com/img/hero.webp"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is eToro?","acceptedAnswer":{"@type":"Answer","text":"A multi-asset investment platform founded in 2007 and listed on Nasdaq under the ticker ETOR. It reports more than 40 million registered users and operates through regulated companies in the EU, the UK, Australia and the US."}},{"@type":"Question","name":"What does copying my portfolio mean?","acceptedAnswer":{"@type":"Answer","text":"With eToro's CopyTrader you choose an amount (from $200) and your account mirrors my portfolio automatically, in proportion. You stay in control: pause, add or withdraw funds, or stop copying whenever you want."}},{"@type":"Question","name":"What is a Popular Investor?","acceptedAnswer":{"@type":"Answer","text":"eToro's program for investors that others can copy, with four levels: Cadet, Champion, Elite and Elite Pro. I am at Elite, which requires at least $400K copying you and an investment qualification. eToro pays Popular Investors based on the assets copying them. Copiers do not pay me."}},{"@type":"Question","name":"What does it cost?","acceptedAnswer":{"@type":"Answer","text":"Copied trades use eToro's standard fees, the same as the trades you make yourself. Read eToro's fee page before you start."}},{"@type":"Question","name":"Can I lose money?","acceptedAnswer":{"@type":"Answer","text":"Yes. Investments can go down as well as up, copying does not remove risk, and past returns do not guarantee future ones. Only invest money you can afford to lose."}},{"@type":"Question","name":"How do I start?","acceptedAnswer":{"@type":"Answer","text":"Open an eToro account, search for Le_kousou and press Copy. If you sign up through my link, eToro may offer you a welcome bonus, depending on your country and eToro's terms."}}]}]}</script></head><body><header class="top" id="hdr"><div class="wrap"><a class="mark" href="index.html" aria-label="Konstantinos Kousouris"><i>KK</i><span>KOUSOURIS</span></a><nav class="nav" aria-label="Sections"><a href="investor.html">As an investor</a><a href="entrepreneur.html">As an entrepreneur</a><a href="copytrading.html" aria-current="page">Copy trading</a><a href="recognition.html">Recognition & media</a></nav><div class="langs" role="group" aria-label="Language"><a href="copytrading.html" hreflang="en" lang="en" aria-current="true">EN</a><a href="el/copytrading.html" hreflang="el" lang="el">EL</a><a href="es/copytrading.html" hreflang="es" lang="es">ES</a></div><a href="collaborate.html" class="btn primary book">Let's collaborate</a><button type="button" class="btn menu-btn" aria-expanded="false" aria-controls="mnav">Menu</button></div><div class="mnav" id="mnav"><div class="wrap"><a href="index.html">Home</a><a href="investor.html">As an investor</a><a href="entrepreneur.html">As an entrepreneur</a><a href="copytrading.html">Copy trading</a><a href="recognition.html">Recognition & media</a><a href="collaborate.html">Let's collaborate</a></div></div></header><main id="app" data-page="copytrading"><section class="phero"><div class="wrap"><p class="eyebrow">Copy trading</p><h1 class="h2">Copy trading, explained</h1><p class="lede">Copy trading lets you put money behind an investor you trust and have your account mirror their decisions automatically. Here is how it works on eToro, what it costs, where the risks are, and a short quiz to see whether my style fits you.</p></div></section><section id="how"><div class="wrap"><div class="head"><h2>How copying works</h2></div><div class="steps"><div class="step"><b>1</b><h3>Choose an investor</h3><p>Every Popular Investor on eToro has a public profile: returns, risk score, holdings and copiers. Mine is Le_kousou.</p></div><div class="step"><b>2</b><h3>Pick an amount</h3><p>From $200. Your money mirrors the portfolio in proportion: if 5% of my portfolio is in a stock, 5% of your copy amount goes there too.</p></div><div class="step"><b>3</b><h3>Stay in control</h3><p>You can pause, add or withdraw funds, or stop copying at any time. Copied trades use eToro's standard fees. You never pay me.</p></div></div></div></section><section id="quiz"><div class="wrap"><div class="panel pad quizbox"><p class="eyebrow">Quiz</p><h2>Does copying my portfolio fit you?</h2><p class="lede">Five quick questions. Answer honestly and you get an honest result, not a sales pitch.</p><form id="quiz-form" class="quiz" data-progress="Question {i} of {n}"><fieldset class="qq" data-q="0"><legend><span class="qn">1</span>How long are you planning to let your money work?</legend><div class="opts"><label class="opt"><input type="radio" name="q0" value="0" id="q0o0" required><span>Less than a year</span></label><label class="opt"><input type="radio" name="q0" value="1" id="q0o1" required><span>1 to 3 years</span></label><label class="opt"><input type="radio" name="q0" value="2" id="q0o2" required><span>3 to 5 years</span></label><label class="opt"><input type="radio" name="q0" value="3" id="q0o3" required><span>5 years or more, I am building wealth</span></label></div></fieldset><fieldset class="qq" data-q="1"><legend><span class="qn">2</span>What are you mainly after?</legend><div class="opts"><label class="opt"><input type="radio" name="q1" value="0" id="q1o0" required><span>Quick gains in weeks or months</span></label><label class="opt"><input type="radio" name="q1" value="3" id="q1o1" required><span>Steady growth over the years</span></label><label class="opt"><input type="radio" name="q1" value="3" id="q1o2" required><span>Beating the market with patience</span></label><label class="opt"><input type="radio" name="q1" value="1" id="q1o3" required><span>Keeping my capital safe with minimal swings</span></label></div></fieldset><fieldset class="qq" data-q="2"><legend><span class="qn">3</span>How much investing experience do you have?</legend><div class="opts"><label class="opt"><input type="radio" name="q2" value="2" id="q2o0" required><span>I am just starting and want to learn</span></label><label class="opt"><input type="radio" name="q2" value="3" id="q2o1" required><span>I have invested in stocks or ETFs before</span></label><label class="opt"><input type="radio" name="q2" value="1" id="q2o2" required><span>I trade actively and like to control every move</span></label><label class="opt"><input type="radio" name="q2" value="1" id="q2o3" required><span>None, and I would rather not learn</span></label></div></fieldset><fieldset class="qq" data-q="3"><legend><span class="qn">4</span>Your investment drops 10% in a month. What do you do?</legend><div class="opts"><label class="opt"><input type="radio" name="q3" value="0" id="q3o0" required><span>Sell, I cannot stand losses</span></label><label class="opt"><input type="radio" name="q3" value="2" id="q3o1" required><span>Feel uneasy, but hold on</span></label><label class="opt"><input type="radio" name="q3" value="3" id="q3o2" required><span>Hold, swings are part of long-term investing</span></label><label class="opt"><input type="radio" name="q3" value="3" id="q3o3" required><span>See it as a chance to add more</span></label></div></fieldset><fieldset class="qq" data-q="4"><legend><span class="qn">5</span>How involved do you want to be?</legend><div class="opts"><label class="opt"><input type="radio" name="q4" value="0" id="q4o0" required><span>I want to pick every stock myself</span></label><label class="opt"><input type="radio" name="q4" value="3" id="q4o1" required><span>I want a clear strategy I can follow and check monthly</span></label><label class="opt"><input type="radio" name="q4" value="3" id="q4o2" required><span>I prefer to delegate and read the monthly updates</span></label><label class="opt"><input type="radio" name="q4" value="2" id="q4o3" required><span>I want to copy several investors and compare them</span></label></div></fieldset><div class="qfoot"><button type="submit" class="btn primary">See my result <span class="arr">→</span></button><span class="tiny muted">This quiz is an educational self-check, not investment advice or a personal recommendation. Only you can decide what fits your situation.</span></div></form><div class="qres" data-tier="high" hidden><p class="eyebrow">Does copying my portfolio fit you?</p><h3 class="qtitle high">Good fit</h3><p>Your horizon, goals and temperament match the way I invest: long-term, global stocks, bought below what I believe they are worth, with every move explained in a monthly update.</p><p>Before you copy, know the swings: the largest drop since January 2023 was 10.9%, and between September 2021 and May 2024 the portfolio fell 33%. Copy only with money you will not need for years, and start with an amount you are comfortable with.</p><div class="cta"><a href="https://med.etoro.com/aw.aspx?A=127440&amp;Task=Click&amp;TargetURL=https%3A%2F%2Fwww.etoro.com%2Fpeople%2Fle_kousou%2Fportfolio&amp;SubAffiliateID=portfolio" target="_blank" rel="noopener" class="btn primary">Copy Le_kousou on eToro <span class="arr">→</span></a><a href="https://go.etoro.com/en/deposit/tiered-bonus?utm_medium=Affiliate&amp;utm_source=127440&amp;utm_content=22118&amp;utm_serial=Konstantinos&amp;utm_campaign=Konstantinos" target="_blank" rel="noopener" class="btn">Open an eToro account</a><button type="button" class="btn qagain">Start over</button></div><p class="tiny muted">This quiz is an educational self-check, not investment advice or a personal recommendation. Only you can decide what fits your situation.</p><p class="riskline">Copy Trading is not investment advice | Capital at risk | Past performance does not guarantee future results</p></div><div class="qres" data-tier="mid" hidden><p class="eyebrow">Does copying my portfolio fit you?</p><h3 class="qtitle mid">Partial fit</h3><p>Some of your answers match my style and some do not. That usually means one of two things: your horizon is shorter than this portfolio needs, or you want more control than copying gives you.</p><p>If you still want to try, start small, read the questions below first, and remember the swings: the largest drop since January 2023 was 10.9%, and in 2021 to 2024 the portfolio fell 33%.</p><div class="cta"><a href="https://med.etoro.com/aw.aspx?A=127440&amp;Task=Click&amp;TargetURL=https%3A%2F%2Fwww.etoro.com%2Fpeople%2Fle_kousou%2Fportfolio&amp;SubAffiliateID=portfolio" target="_blank" rel="noopener" class="btn primary">Copy Le_kousou on eToro <span class="arr">→</span></a><a class="btn" href="#faq">Read how copying works</a><button type="button" class="btn qagain">Start over</button></div><p class="tiny muted">This quiz is an educational self-check, not investment advice or a personal recommendation. Only you can decide what fits your situation.</p><p class="riskline">Copy Trading is not investment advice | Capital at risk | Past performance does not guarantee future results</p></div><div class="qres" data-tier="low" hidden><p class="eyebrow">Does copying my portfolio fit you?</p><h3 class="qtitle low">Probably not the right fit, for now</h3><p>A short horizon, a need for quick gains or discomfort with drops do not match a long-term stock portfolio, and I would rather tell you that than take your copy.</p><p>Consider building an emergency fund first, learning the basics, or speaking with a licensed adviser. The questions below explain how copying works whenever you want to come back.</p><div class="cta"><a class="btn primary" href="#faq">Read how copying works</a><button type="button" class="btn qagain">Start over</button></div><p class="tiny muted">This quiz is an educational self-check, not investment advice or a personal recommendation. Only you can decide what fits your situation.</p><p class="riskline">Copy Trading is not investment advice | Capital at risk | Past performance does not guarantee future results</p></div></div></div></section><section id="faq"><div class="wrap"><div class="head"><p class="eyebrow">New to eToro?</p><h2>How copying works</h2></div><div class="faq"><details open><summary>What is eToro?</summary><p>A multi-asset investment platform founded in 2007 and listed on Nasdaq under the ticker ETOR. It reports more than 40 million registered users and operates through regulated companies in the EU, the UK, Australia and the US. <a href="https://www.etoro.com/customer-service/regulation-license/" target="_blank" rel="noopener">Regulation and licences ↗</a></p></details><details open><summary>What does copying my portfolio mean?</summary><p>With eToro's CopyTrader you choose an amount (from $200) and your account mirrors my portfolio automatically, in proportion. You stay in control: pause, add or withdraw funds, or stop copying whenever you want.</p></details><details><summary>What is a Popular Investor?</summary><p>eToro's program for investors that others can copy, with four levels: Cadet, Champion, Elite and Elite Pro. I am at Elite, which requires at least $400K copying you and an investment qualification. eToro pays Popular Investors based on the assets copying them. Copiers do not pay me. <a href="https://www.etoro.com/copytrader/popular-investor/" target="_blank" rel="noopener">eToro ↗</a></p></details><details><summary>What does it cost?</summary><p>Copied trades use eToro's standard fees, the same as the trades you make yourself. Read eToro's fee page before you start. <a href="https://www.etoro.com/trading/fees/" target="_blank" rel="noopener">eToro fees ↗</a></p></details><details><summary>Can I lose money?</summary><p>Yes. Investments can go down as well as up, copying does not remove risk, and past returns do not guarantee future ones. Only invest money you can afford to lose.</p></details><details><summary>How do I start?</summary><p>Open an eToro account, search for Le_kousou and press Copy. If you sign up through my link, eToro may offer you a welcome bonus, depending on your country and eToro's terms.</p></details></div></div></section><section id="copy"><div class="wrap"><div class="panel pad cta-box"><div><h3>Ready to look closer?</h3><p class="small" style="color:var(--fg-2);margin:6px 0 0">Open an account through my link, or go straight to my portfolio.</p><p class="riskline">eToro is a multi-asset investment platform. The value of your investments may go up or down. Your capital is at risk.<br>Copy Trading is not investment advice | Capital at risk | Past performance does not guarantee future results</p><p class="tiny muted" style="margin:10px 0 0">I earn a commission if you sign up using my link. #eToroAffiliate</p></div><div class="cta" style="margin:0;flex-direction:column"><a href="https://med.etoro.com/aw.aspx?A=127440&amp;Task=Click&amp;TargetURL=https%3A%2F%2Fwww.etoro.com%2Fpeople%2Fle_kousou%2Fportfolio&amp;SubAffiliateID=portfolio" target="_blank" rel="noopener" class="btn primary">Copy Le_kousou on eToro <span class="arr">→</span></a><a href="https://go.etoro.com/en/deposit/tiered-bonus?utm_medium=Affiliate&amp;utm_source=127440&amp;utm_content=22118&amp;utm_serial=Konstantinos&amp;utm_campaign=Konstantinos" target="_blank" rel="noopener" class="btn">Open an eToro account</a></div></div></div></section><section id="perks"><div class="wrap"><div class="panel pad perks"><div><p class="eyebrow">For my copiers</p><h2 style="font-size:clamp(30px,4vw,46px)">For my copiers</h2><p class="lede">If you copy my portfolio, you get two extras on top of the monthly updates on eToro:</p><ul class="ticks"><li><span><b style="color:var(--fg)">Free access to my Substack.</b> The LK Index 360° stock reports and the analysis behind every position.</span></li><li><span><b style="color:var(--fg)">A free 15-minute call once a year.</b> Ask me anything about the portfolio and my process.</span></li></ul></div><div class="cta" style="margin:0;flex-direction:column"><span class="btn" aria-disabled="true" style="opacity:.6">Register as a copier</span><p class="tiny muted" style="margin:0">Registration opens soon. Until then, write to me on eToro after you copy.</p></div></div></div></section></main><footer id="ftr"><div class="wrap"><nav class="fnav" aria-label="Footer"><a href="index.html">Home</a><a href="investor.html">As an investor</a><a href="entrepreneur.html">As an entrepreneur</a><a href="copytrading.html">Copy trading</a><a href="recognition.html">Recognition & media</a><a href="collaborate.html">Let's collaborate</a></nav><div class="legal"><p><b>Konstantinos Kousouris is an eToro Popular Investor (Elite). He is not a licensed financial adviser, and nothing on this site is investment advice or a personal recommendation.</b></p><p>eToro is a multi-asset investment platform. The value of your investments may go up or down. Your capital is at risk.</p><p>Copy Trading does not amount to investment advice. Your investments value may go up or down. Your capital is at risk.</p><p>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 51% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p><p>Past performance is not an indication of future results.</p><p>Disclosure: I earn a commission if you sign up using my link, and eToro pays me as a Popular Investor based on the assets copying my portfolio. #eToroAffiliate</p><p>Performance data: BullAware (bullaware.com), compiled from public eToro data; month-end returns; portfolio launched June 2021; data as of October 20, 2026. BullAware scores are calculated with BullAware's published method for the periods shown. The S&P 500 comparison uses the price index BullAware applies.</p><p>Names of media, awards, platforms and companies belong to their owners and link to the original sources. eToro and BullAware do not endorse this site.</p><p>© 2026 Konstantinos Kousouris</p></div></div></footer><script>/* Universal statistics module (Node + browser). Computes everything the pages show from the BullAware data file. */
+(function (root, factory) {
+  if (typeof module !== 'undefined' && module.exports) module.exports = factory(); else root.KKStats = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  'use strict';
+  const km = k => { const p = k.split('-'); return +p[0] * 12 + +p[1]; };
+  const yearOf = k => +k.split('-')[0];
+  const monOf = k => +k.split('-')[1];
+  const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+  const svar = a => { const m = mean(a); return a.reduce((x, y) => x + (y - m) * (y - m), 0) / (a.length - 1); };
+  const scov = (a, b) => { const ma = mean(a), mb = mean(b); let s = 0; for (let i = 0; i < a.length; i++) s += (a[i] - ma) * (b[i] - mb); return s / (a.length - 1); };
+  const sstd = a => Math.sqrt(svar(a));
+  const rfm = r => (Math.pow(1 + r / 100, 1 / 12) - 1) * 100;
+  const o10 = (v, lo, hi) => v <= lo ? 1 : v >= hi ? 10 : (v - lo) / (hi - lo) * 9 + 1;
+  const comp = (keys, src) => keys.reduce((a, k) => a * (1 + (src[k] || 0) / 100), 1);
+
+  /* BullAware's published metric method, reproduced exactly (verified against its All Time figures). */
+  function bullaware(D, keys) {
+    const M = D.monthly;
+    const ks = keys.filter(k => k in D.spx && k in D.rf);
+    const p = ks.map(k => M[k]), b = ks.map(k => D.spx[k]), r = ks.map(k => rfm(D.rf[k]));
+    const ex = p.map((v, i) => v - r[i]), bex = b.map((v, i) => v - r[i]);
+    const beta = scov(p, b) / svar(b);
+    const ann = 12 * mean(ex);
+    const sharpe = ann / (sstd(ex) * Math.sqrt(12));
+    const dd2 = Math.sqrt(mean(ex.map(e => Math.min(e, 0) ** 2)));
+    const sortino = dd2 > 0 ? Math.min(ann / (dd2 * Math.sqrt(12)), 10) : 10;
+    const alpha = 100 * (Math.pow(1 + (mean(ex) - beta * mean(bex)) / 100, 12) - 1);
+    const diff = p.map((v, i) => v - b[i]);
+    const omega = (1 + diff.filter(d => d > 0).reduce((x, y) => x + y, 0)) / (1 - diff.filter(d => d <= 0).reduce((x, y) => x + y, 0));
+    const treynor = mean(ex) / beta;
+    const info = mean(diff) / sstd(diff) * Math.sqrt(12);
+    const g = Math.pow(Math.exp(mean(p.map(v => Math.log(Math.max(1 + v / 100, 1e-12))))), 12) - 1;
+    let mdd = 0, peak = 100, lvl = 100;
+    for (const v of p) { lvl *= 1 + v / 100; if (lvl > peak) peak = lvl; else mdd = Math.max(mdd, (peak - lvl) / peak); }
+    const calmar = mdd > 0 ? Math.min(g / mdd, 10) : 10;
+    const nAll = Object.keys(M).length;
+    const bs = beta <= 0 ? 10 : beta >= 2 ? 1 : 10 - beta / 2 * 9;
+    const score = bs * .1 + .15 * o10(sharpe, 0, 2) + .1 * o10(sortino, 0, 2) + .15 * o10(alpha, -2, 2) + .15 * o10(omega, 0, 2.5) + .1 * o10(treynor, 0, 2) + .1 * o10(info, 0, 1) + .075 * o10(calmar, 0, 1) + .075 * o10(nAll, 0, 60);
+    return { ks, beta, sharpe, sortino, alpha, omega, treynor, info, calmar, score };
+  }
+
+  function compute(D, startYear) {
+    startYear = startYear || 2023;
+    const M = D.monthly;
+    const months = Object.keys(M).sort((a, b) => km(a) - km(b));
+    const SPX = Object.assign({}, D.spx, D.spxRecent || {});
+    const since = months.filter(k => yearOf(k) >= startYear);
+    const lastKey = months[months.length - 1], lastYear = yearOf(lastKey);
+    const asOf = D.updatedAt ? new Date(D.updatedAt) : new Date();
+    const lastN = n => months.slice(-n);
+    const W3 = bullaware(D, lastN(36)), W2 = bullaware(D, lastN(24)), W1 = bullaware(D, lastN(12)), WY = bullaware(D, months.filter(k => yearOf(k) === lastYear)), WALL = bullaware(D, months);
+    const total = comp(since, M) - 1, spxTotal = comp(since.filter(k => k in SPX), SPX) - 1;
+    const yrs = (asOf.getTime() - Date.UTC(startYear, 0, 1)) / (365.25 * 864e5);
+    const ann = Math.pow(1 + total, 1 / yrs) - 1, annSpx = Math.pow(1 + spxTotal, 1 / yrs) - 1;
+    const pos = since.filter(k => M[k] > 0).length;
+    let mdd = 0, mddAt = null; { let p = 1, l = 1; for (const k of since) { l *= 1 + M[k] / 100; if (l > p) p = l; else { const d = (p - l) / p; if (d > mdd) { mdd = d; mddAt = k; } } } }
+    let mddAll = 0; { let p = 1, l = 1; for (const k of months) { l *= 1 + M[k] / 100; if (l > p) p = l; else mddAll = Math.max(mddAll, (p - l) / p); } }
+    const k60 = lastN(60), r5 = comp(k60, M) - 1, s5 = comp(k60.filter(k => k in SPX), SPX) - 1;
+    const years = []; for (let y = startYear; y <= lastYear; y++) { const ks = months.filter(k => yearOf(k) === y); years.push({ y, me: comp(ks, M) - 1, spx: comp(ks.filter(k => k in SPX), SPX) - 1, n: ks.length }); }
+    const growthKeys = [(startYear - 1) + '-12'].concat(since);
+    const growthMe = [1], growthSpx = [1];
+    since.forEach(k => { growthMe.push(growthMe[growthMe.length - 1] * (1 + M[k] / 100)); growthSpx.push(growthSpx[growthSpx.length - 1] * (1 + (SPX[k] || 0) / 100)); });
+    const countries = (D.countries || []).filter(c => c[0] !== 'ZZ');
+    const cDaily = D.copiersDaily || [];
+    const cPrev = cDaily.length > 365 ? cDaily[cDaily.length - 1 - 365] : null;
+    const cGrowth = cPrev ? (cDaily[cDaily.length - 1] / cPrev - 1) * 100 : null;
+    const allTotal = comp(months, M) - 1;
+    return { months, since, lastKey, lastYear, asOf, W3, W2, W1, WY, WALL, total, spxTotal, ann, annSpx, pos, mdd, mddAt, mddAll, k60, r5, s5, years, growthKeys, growthMe, growthSpx, countries, nCountries: countries.length, cDaily, cGrowth, allTotal, SPX, startYear };
+  }
+  return { km, yearOf, monOf, comp, bullaware, compute };
+});
+
+/* Universal chart module (Node + browser): returns SVG strings plus a model the client uses for tooltips. Colors come from CSS tokens so charts follow the theme. */
+(function (root, factory) {
+  if (typeof module !== 'undefined' && module.exports) module.exports = factory(); else root.KKCharts = factory();
+})(typeof self !== 'undefined' ? self : this, function () {
+  'use strict';
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  function niceStep(range, target) { const raw = range / target, mag = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / mag; return (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * mag; }
+  const SURF = 'var(--surface)';
+
+  /* Growth of an amount: one series, area fill, end label. */
+  function growth(o) {
+    const W = Math.max(300, o.W || 1000), H = W < 560 ? 240 : 320, L = 56, R = W < 560 ? 70 : 92, T = 16, B = 30;
+    const v = o.values, n = v.length, id = o.id || 'g';
+    const step = niceStep(Math.max(1, Math.max.apply(null, v) - Math.min.apply(null, v)), 4);
+    const y0 = Math.floor(Math.min.apply(null, v) / step) * step, y1 = Math.ceil(Math.max.apply(null, v) / step) * step;
+    const x = i => L + (W - L - R) * i / (n - 1), y = q => T + (H - T - B) * (1 - (q - y0) / (y1 - y0));
+    let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label) + '"><defs><linearGradient id="' + id + '-f" x1="0" x2="0" y1="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.24"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:0"/></linearGradient></defs>';
+    for (let q = y0; q <= y1 + 1e-9; q += step) s += '<line class="gl" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(q).toFixed(1) + '" y2="' + y(q).toFixed(1) + '"/><text x="' + (L - 8) + '" y="' + (y(q) + 4).toFixed(1) + '" text-anchor="end">' + esc(o.fmtAxis(q)) + '</text>';
+    (o.xTicks || []).forEach(t => { s += '<text x="' + x(t.i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="' + (t.i === 0 ? 'start' : 'middle') + '">' + esc(t.label) + '</text>'; });
+    const line = v.map((q, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(q).toFixed(1)).join('');
+    s += '<path d="' + line + 'L' + x(n - 1).toFixed(1) + ' ' + y(y0).toFixed(1) + 'L' + x(0).toFixed(1) + ' ' + y(y0).toFixed(1) + 'Z" fill="url(#' + id + '-f)"/>';
+    s += '<path d="' + line + '" fill="none" style="stroke:var(--accent)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    s += '<circle cx="' + x(n - 1).toFixed(1) + '" cy="' + y(v[n - 1]).toFixed(1) + '" r="5" style="fill:var(--accent);stroke:' + SURF + '" stroke-width="2"/>';
+    s += '<text class="lab" x="' + (x(n - 1) + 9).toFixed(1) + '" y="' + (y(v[n - 1]) + 4).toFixed(1) + '">' + esc(o.fmtEnd(v[n - 1])) + '</text>';
+    s += '<line class="xh" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" visibility="hidden"/><circle class="hd" r="5" style="fill:var(--accent);stroke:' + SURF + '" stroke-width="2" visibility="hidden"/><rect class="hit" x="' + L + '" y="0" width="' + (W - L - R) + '" height="' + H + '" fill="transparent"/></svg>';
+    return { svg: s, model: { W, L, R, n, xs: v.map((q, i) => +x(i).toFixed(1)), ys: v.map(q => +y(q).toFixed(1)) } };
+  }
+
+  /* Paired columns per year: me vs benchmark. */
+  function years(o) {
+    const W = Math.max(300, o.W || 1000), H = W < 560 ? 230 : 280, L = 8, R = 8, T = 28, B = 30;
+    const d = o.years, vals = d.flatMap(r => [r.me, r.spx]).map(q => q * 100);
+    const vmax = Math.max(5, Math.max.apply(null, vals)), vmin = Math.min(0, Math.min.apply(null, vals));
+    const y = q => T + (H - T - B) * (1 - (q - vmin) / (vmax - vmin)), band = (W - L - R) / d.length, bw = Math.min(24, band / 4), fs = W < 560 ? 10 : 12.5;
+    let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label) + '"><line class="base" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(0).toFixed(1) + '" y2="' + y(0).toFixed(1) + '"/>';
+    const bar = (cx, q, cls) => { const top = y(Math.max(q, 0)), bot = y(Math.min(q, 0)), h = Math.max(2, bot - top), rr = Math.min(4, h / 2), a = cx - bw / 2, b = cx + bw / 2; const p = q >= 0 ? 'M' + a + ' ' + bot + 'V' + (top + rr) + 'Q' + a + ' ' + top + ' ' + (a + rr) + ' ' + top + 'H' + (b - rr) + 'Q' + b + ' ' + top + ' ' + b + ' ' + (top + rr) + 'V' + bot + 'Z' : 'M' + a + ' ' + top + 'V' + (bot - rr) + 'Q' + a + ' ' + bot + ' ' + (a + rr) + ' ' + bot + 'H' + (b - rr) + 'Q' + b + ' ' + bot + ' ' + b + ' ' + (bot - rr) + 'V' + top + 'Z'; return '<path d="' + p + '" style="fill:var(' + cls + ')"/>'; };
+    d.forEach((r, i) => {
+      const c = L + band * (i + .5), a = c - bw / 2 - 3, b = c + bw / 2 + 3, me = r.me * 100, sp = r.spx * 100;
+      s += bar(a, me, me >= 0 ? '--pos' : '--neg') + bar(b, sp, '--bench');
+      s += '<text class="lab" x="' + (a + bw / 2).toFixed(1) + '" y="' + (me >= 0 ? y(me) - 8 : y(me) + 16).toFixed(1) + '" text-anchor="end" style="font-size:' + fs + 'px">' + esc(o.fmt(me)) + '</text>';
+      s += '<text x="' + (b - bw / 2).toFixed(1) + '" y="' + (sp >= 0 ? y(sp) - 8 : y(sp) + 16).toFixed(1) + '" text-anchor="start" style="font-size:' + fs + 'px">' + esc(o.fmt(sp)) + '</text>';
+      s += '<text x="' + c.toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle" style="fill:var(--fg-2);font-weight:600">' + r.y + (r.partial ? '*' : '') + '</text>';
+      s += '<rect class="hit" x="' + (c - band / 2).toFixed(1) + '" y="0" width="' + band.toFixed(1) + '" height="' + H + '" fill="transparent" data-i="' + i + '"/>';
+    });
+    return { svg: s + '</svg>', model: { W } };
+  }
+
+  /* Daily copiers line. */
+  function copiers(o) {
+    const W = Math.max(300, o.W || 1000), H = W < 560 ? 220 : 260, L = 44, R = W < 560 ? 56 : 68, T = 14, B = 30;
+    const v = o.values, n = v.length, id = o.id || 'c';
+    const vmax = Math.ceil(Math.max.apply(null, v) / 1000) * 1000;
+    const x = i => L + (W - L - R) * i / (n - 1), y = q => T + (H - T - B) * (1 - q / vmax);
+    let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label) + '"><defs><linearGradient id="' + id + '-f" x1="0" x2="0" y1="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.24"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:0"/></linearGradient></defs>';
+    for (let q = 0; q <= vmax; q += 1000) s += '<line class="gl" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(q).toFixed(1) + '" y2="' + y(q).toFixed(1) + '"/><text x="' + (L - 8) + '" y="' + (y(q) + 4).toFixed(1) + '" text-anchor="end">' + (q ? (q / 1000) + 'K' : '0') + '</text>';
+    (o.xTicks || []).forEach(t => { s += '<text x="' + x(t.i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle">' + esc(t.label) + '</text>'; });
+    const stepPx = Math.max(1, Math.floor(n / 600)); let path = '';
+    for (let i = 0; i < n; i += stepPx) path += (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v[i]).toFixed(1);
+    path += 'L' + x(n - 1).toFixed(1) + ' ' + y(v[n - 1]).toFixed(1);
+    s += '<path d="' + path + 'L' + x(n - 1).toFixed(1) + ' ' + y(0).toFixed(1) + 'L' + x(0).toFixed(1) + ' ' + y(0).toFixed(1) + 'Z" fill="url(#' + id + '-f)"/><path d="' + path + '" fill="none" style="stroke:var(--accent)" stroke-width="2" stroke-linejoin="round"/>';
+    s += '<circle cx="' + x(n - 1).toFixed(1) + '" cy="' + y(v[n - 1]).toFixed(1) + '" r="5" style="fill:var(--accent);stroke:' + SURF + '" stroke-width="2"/><text class="lab" x="' + (x(n - 1) + 9).toFixed(1) + '" y="' + (y(v[n - 1]) + 4).toFixed(1) + '">' + esc(o.fmtEnd(v[n - 1])) + '</text>';
+    s += '<line class="xh" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" visibility="hidden"/><circle class="hd" r="5" style="fill:var(--accent);stroke:' + SURF + '" stroke-width="2" visibility="hidden"/><rect class="hit" x="' + L + '" y="0" width="' + (W - L - R) + '" height="' + H + '" fill="transparent"/></svg>';
+    return { svg: s, model: { W, L, R, n, xs: null, ys: null, x: null } };
+  }
+
+  /* Dot map of copier countries. */
+  function map(o) {
+    const MAP = o.map, cnt = {}; o.countries.forEach(c => { cnt[c[0]] = c[1]; });
+    const mx = Math.log(1 + Math.max.apply(null, o.countries.map(c => c[1])));
+    let s = '<svg viewBox="0 0 ' + MAP.w + ' ' + MAP.h + '" role="img" aria-label="' + esc(o.label) + '">';
+    const dot = (x, y, ci, big) => { const c = MAP.codes[ci], v = cnt[c] || 0; if (!v) return '<circle cx="' + x + '" cy="' + y + '" r="1.55" style="fill:var(--line-2)" opacity=".6"/>'; const op = (.38 + .62 * Math.log(1 + v) / mx).toFixed(2); return '<circle cx="' + x + '" cy="' + y + '" r="' + (big ? 3.4 : 2.3) + '" style="fill:var(--accent)" opacity="' + op + '" data-c="' + c + '"/>'; };
+    MAP.dots.forEach(d => { s += dot(d[0], d[1], d[2]); });
+    (MAP.extra || []).forEach(d => { s += dot(d[0], d[1], d[2], 1); });
+    return { svg: s + '</svg>' };
+  }
+
+  function dial(score) {
+    const r = 120, c = 2 * Math.PI * r, f = Math.max(0, Math.min(1, score / 10));
+    let s = '<svg viewBox="0 0 300 300" aria-hidden="true"><defs><linearGradient id="dg" x1="0" x2="1" y1="1" y2="0"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--pos)"/></linearGradient></defs><circle cx="150" cy="150" r="' + r + '" fill="none" style="stroke:var(--line)" stroke-width="14"/><circle cx="150" cy="150" r="' + r + '" fill="none" stroke="url(#dg)" stroke-width="14" stroke-linecap="round" stroke-dasharray="' + (c * f).toFixed(1) + ' ' + c.toFixed(1) + '" transform="rotate(-90 150 150)"/>';
+    for (let i = 0; i < 10; i++) { const a = i / 10 * 2 * Math.PI - Math.PI / 2; s += '<circle cx="' + (150 + 142 * Math.cos(a)).toFixed(1) + '" cy="' + (150 + 142 * Math.sin(a)).toFixed(1) + '" r="2" style="fill:var(--muted)"/>'; }
+    return s + '</svg>';
+  }
+
+  /* Decorative signature line for the home hero. */
+  function trail(values) {
+    const v = values, n = v.length, lo = Math.min.apply(null, v), hi = Math.max.apply(null, v);
+    const x = i => i / (n - 1) * 1000, y = q => 290 - (q - lo) / (hi - lo) * 250;
+    const d = v.map((q, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(q).toFixed(1)).join('');
+    return '<defs><linearGradient id="trailfill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" style="stop-color:var(--accent);stop-opacity:.16"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:0"/></linearGradient></defs><path class="a" d="' + d + 'L1000 300L0 300Z"/><path class="l" d="' + d + '"/><circle cx="1000" cy="' + y(v[n - 1]).toFixed(1) + '" r="5" style="fill:var(--accent)"/>';
+  }
+
+  /* Projection: several compounding scenarios over N years. series: [{values:[...], cls:'--accent'|'--bench'|'--pos', label}] */
+  function lines(o) {
+    const W = Math.max(300, o.W || 1000), H = W < 560 ? 240 : 300, L = 64, R = W < 560 ? 76 : 100, T = 16, B = 30;
+    const all = o.series.flatMap(s => s.values), n = o.series[0].values.length;
+    const step = niceStep(Math.max(1, Math.max.apply(null, all) - Math.min.apply(null, all)), 4);
+    const y0 = Math.floor(Math.min.apply(null, all) / step) * step, y1 = Math.ceil(Math.max.apply(null, all) / step) * step;
+    const x = i => L + (W - L - R) * i / (n - 1), y = q => T + (H - T - B) * (1 - (q - y0) / (y1 - y0));
+    let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label) + '">';
+    for (let q = y0; q <= y1 + 1e-9; q += step) s += '<line class="gl" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(q).toFixed(1) + '" y2="' + y(q).toFixed(1) + '"/><text x="' + (L - 8) + '" y="' + (y(q) + 4).toFixed(1) + '" text-anchor="end">' + esc(o.fmtAxis(q)) + '</text>';
+    const tickEvery = n > 12 ? 5 : 1;
+    for (let i = 0; i < n; i += tickEvery) s += '<text x="' + x(i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle">' + (o.xLabel ? o.xLabel(i) : i) + '</text>';
+    o.series.forEach((sr, k) => {
+      const d = sr.values.map((q, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(q).toFixed(1)).join('');
+      s += '<path d="' + d + '" fill="none" style="stroke:var(' + sr.cls + ')" stroke-width="' + (k === 0 ? 2.5 : 2) + '" stroke-linejoin="round" stroke-linecap="round"' + (k === 0 ? '' : ' stroke-dasharray="6 5"') + '/>';
+      s += '<circle cx="' + x(n - 1).toFixed(1) + '" cy="' + y(sr.values[n - 1]).toFixed(1) + '" r="4.5" style="fill:var(' + sr.cls + ');stroke:' + SURF + '" stroke-width="2"/>';
+    });
+    const ends = o.series.map((sr, k) => ({ k, yv: y(sr.values[n - 1]), txt: o.fmtEnd(sr.values[n - 1]) })).sort((a, b) => a.yv - b.yv);
+    let last = -99; ends.forEach(e => { let yy = Math.max(e.yv, last + 16); last = yy; s += '<text class="' + (e.k === 0 ? 'lab' : '') + '" x="' + (x(n - 1) + 9).toFixed(1) + '" y="' + (yy + 4).toFixed(1) + '">' + esc(e.txt) + '</text>'; });
+    return { svg: s + '</svg>' };
+  }
+  return { growth, years, copiers, map, dial, trail, lines, esc };
+});
+
+/* Browser-only behaviour: menu, copy button, responsive chart redraws with tooltips, the amount calculator. Content is already in the HTML. */
+(function () {
+  'use strict';
+  const $ = (q, r) => (r || document).querySelector(q);
+  const lang = document.documentElement.lang || 'en';
+  const LOC = { en: 'en-US', el: 'el-GR', es: 'es-ES' }[lang] || 'en-US';
+  const nf = (x, d) => new Intl.NumberFormat(LOC, { minimumFractionDigits: d, maximumFractionDigits: d }).format(x);
+  const pct = (x, d) => new Intl.NumberFormat(LOC, { minimumFractionDigits: d, maximumFractionDigits: d, signDisplay: 'exceptZero' }).format(x) + '%';
+  const usd = x => new Intl.NumberFormat(LOC, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(x);
+  const fill = (str, v) => String(str).replace(/\{(\w+)\}/g, (m, k) => (v && k in v ? v[k] : m));
+
+  /* menu */
+  const mb = $('.menu-btn'), mn = $('#mnav');
+  if (mb && mn) mb.addEventListener('click', () => { const o = mn.classList.toggle('open'); mb.setAttribute('aria-expanded', String(o)); });
+  /* copy email */
+  const cp = $('#copy');
+  if (cp) cp.addEventListener('click', () => {
+    const em = $('#em'); const done = () => { cp.textContent = cp.dataset.copied; setTimeout(() => { cp.textContent = cp.dataset.copy; }, 1800); };
+    const sel = () => { try { const r = document.createRange(); r.selectNodeContents(em); const s = window.getSelection(); s.removeAllRanges(); s.addRange(r); } catch (e) {} };
+    try { navigator.clipboard.writeText(em.textContent).then(done, sel); } catch (e) { sel(); }
+  });
+
+  /* tooltip */
+  let tip;
+  function showTip(x, y, head, rows) {
+    if (!tip) { tip = document.createElement('div'); tip.className = 'tip'; tip.setAttribute('role', 'status'); document.body.appendChild(tip); }
+    tip.textContent = '';
+    const h = document.createElement('div'); h.className = 'h'; h.textContent = head; tip.appendChild(h);
+    rows.forEach(r => { const d = document.createElement('div'); d.className = 'r'; if (r.c) { const i = document.createElement('i'); i.style.background = r.c; d.appendChild(i); } const b = document.createElement('b'); b.textContent = r.v; d.appendChild(b); const s = document.createElement('span'); s.textContent = r.l; d.appendChild(s); tip.appendChild(d); });
+    const w = tip.offsetWidth || 180, hg = tip.offsetHeight || 60;
+    let left = x + 16, top = y - hg - 12; if (left + w > window.innerWidth - 8) left = x - w - 16; if (top < 8) top = y + 18;
+    tip.style.left = Math.max(8, left) + 'px'; tip.style.top = top + 'px'; tip.classList.add('on');
+  }
+  const hideTip = () => { if (tip) tip.classList.remove('on'); };
+
+  /* quiz (copy trading page) */
+  const qf = $('#quiz-form');
+  if (qf) {
+    const show = tier => { document.querySelectorAll('.qres').forEach(r => { r.hidden = r.dataset.tier !== tier; }); qf.hidden = true; const r = $('.qres[data-tier="' + tier + '"]'); if (r) r.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+    qf.addEventListener('submit', e => {
+      e.preventDefault();
+      const qs = qf.querySelectorAll('fieldset.qq'); let total = 0, answered = 0;
+      qs.forEach(f => { const c = f.querySelector('input:checked'); f.classList.toggle('missing', !c); if (c) { total += +c.value; answered++; } });
+      if (answered < qs.length) { const m = qf.querySelector('fieldset.missing'); if (m) m.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      show(total >= 12 ? 'high' : total >= 7 ? 'mid' : 'low');
+    });
+    document.querySelectorAll('.qagain').forEach(b => b.addEventListener('click', () => { qf.reset(); document.querySelectorAll('.qres').forEach(r => { r.hidden = true; }); qf.hidden = false; qf.scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
+  }
+
+  /* charts (investor page) */
+  const dataEl = $('#kk-data'), mapEl = $('#kk-map');
+  if (!dataEl || typeof KKStats === 'undefined') return;
+  const D = JSON.parse(dataEl.textContent), MAP = mapEl ? JSON.parse(mapEl.textContent) : null;
+  const st = KKStats.compute(D, 2023);
+  const keyDate = k => new Date(Date.UTC(KKStats.yearOf(k), KKStats.monOf(k) - 1, 1));
+  const monLabel = k => new Intl.DateTimeFormat(LOC, { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(keyDate(k));
+  const dateLong = d => new Intl.DateTimeFormat(LOC, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
+  const regionName = c => { try { return new Intl.DisplayNames([LOC], { type: 'region' }).of(c) || c; } catch (e) { return c; } };
+  const L = { en: { me: 'My portfolio', spx: 'S&P 500', cop: 'Copiers' }, el: { me: 'Το χαρτοφυλάκιό μου', spx: 'S&P 500', cop: 'Copiers' }, es: { me: 'Mi cartera', spx: 'S&P 500', cop: 'Copiadores' } }[lang];
+  const amtEl = $('#amt');
+  let amount = amtEl ? (+amtEl.value || 10000) : 10000;
+  const accent = () => getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+  const bench = () => getComputedStyle(document.documentElement).getPropertyValue('--bench').trim();
+
+  function wireLine(el, model, labelAt) {
+    const svg = $('svg', el), xh = $('.xh', svg), hd = $('.hd', svg), hit = $('.hit', svg); if (!hit) return;
+    const n = model.n, W = model.W, Lp = model.L, R = model.R;
+    hit.addEventListener('pointermove', e => { const rc = svg.getBoundingClientRect(), px = (e.clientX - rc.left) * W / rc.width; const i = Math.max(0, Math.min(n - 1, Math.round((px - Lp) / (W - Lp - R) * (n - 1)))); const xs = model.xs ? model.xs[i] : Lp + (W - Lp - R) * i / (n - 1), ys = model.ys ? model.ys[i] : null; xh.setAttribute('visibility', 'visible'); xh.setAttribute('x1', xs); xh.setAttribute('x2', xs); if (ys !== null) { hd.setAttribute('visibility', 'visible'); hd.setAttribute('cx', xs); hd.setAttribute('cy', ys); } const t = labelAt(i); showTip(e.clientX, e.clientY, t.head, t.rows); });
+    hit.addEventListener('pointerleave', () => { xh.setAttribute('visibility', 'hidden'); hd.setAttribute('visibility', 'hidden'); hideTip(); });
+  }
+  function drawGrowth() {
+    const el = $('#c-growth'); if (!el) return;
+    const vals = st.growthMe.map(v => v * amount), spx = st.growthSpx.map(v => v * amount);
+    const xT = st.growthKeys.map((k, i) => ({ k, i })).filter(o => o.i === 0 || KKStats.monOf(o.k) === 12).map(o => ({ i: o.i, label: String(o.i === 0 ? st.startYear : KKStats.yearOf(o.k) + 1) })).filter(t => +t.label <= st.lastYear);
+    const g = KKCharts.growth({ W: el.clientWidth || 1000, values: vals, label: el.getAttribute('aria-label') || '', id: 'gr', fmtAxis: q => q === 0 ? '$0' : '$' + nf(q / 1000, q < 10000 ? 1 : 0) + 'K', fmtEnd: q => usd(q), xTicks: xT });
+    el.innerHTML = g.svg;
+    wireLine(el, g.model, i => ({ head: monLabel(st.growthKeys[i]), rows: [{ v: usd(vals[i]), l: L.me, c: accent() }, { v: usd(spx[i]), l: L.spx, c: bench() }] }));
+    const line = $('#spx-line'), title = $('#calc-title');
+    if (line) { const endMe = vals[vals.length - 1], endSpx = spx[spx.length - 1], diff = endMe - endSpx; line.textContent = fill(line.dataset.tpl, { amount: usd(amount), spxValue: usd(endSpx), diff: usd(Math.abs(diff)), more: diff >= 0 ? line.dataset.less : line.dataset.more }); }
+    if (title) title.textContent = fill(title.dataset.tpl, { amount: usd(amount) });
+  }
+  function drawYears() {
+    const el = $('#c-years'); if (!el) return;
+    const yrs = st.years.map(d => ({ y: d.y, me: d.me, spx: d.spx, partial: d.y === st.lastYear }));
+    el.innerHTML = KKCharts.years({ W: el.clientWidth || 1000, years: yrs, label: el.getAttribute('aria-label') || '', fmt: q => pct(q, 1) }).svg;
+    el.querySelectorAll('.hit').forEach(r => { r.addEventListener('pointermove', e => { const d = yrs[+r.dataset.i]; showTip(e.clientX, e.clientY, String(d.y), [{ v: pct(d.me * 100, 1), l: L.me, c: getComputedStyle(document.documentElement).getPropertyValue('--pos').trim() }, { v: pct(d.spx * 100, 1), l: L.spx, c: bench() }]); }); r.addEventListener('pointerleave', hideTip); });
+  }
+  function drawCopiers() {
+    const el = $('#c-copiers'); if (!el) return;
+    const cStart = new Date(D.copiersStart + 'T00:00:00Z'), xT = [];
+    for (let i = 0; i < st.cDaily.length; i++) { const d = new Date(cStart.getTime() + i * 864e5); if (d.getUTCDate() === 1 && d.getUTCMonth() % 3 === 0) xT.push({ i, label: new Intl.DateTimeFormat(LOC, { month: 'short', year: '2-digit', timeZone: 'UTC' }).format(d) }); }
+    const c = KKCharts.copiers({ W: el.clientWidth || 1000, values: st.cDaily, label: el.getAttribute('aria-label') || '', id: 'cp', fmtEnd: q => nf(q, 0), xTicks: xT });
+    el.innerHTML = c.svg;
+    const m = c.model, Wn = m.W, n = m.n; const vmax = Math.ceil(Math.max.apply(null, st.cDaily) / 1000) * 1000; const H = Wn < 560 ? 220 : 260, T = 14, B = 30;
+    m.ys = st.cDaily.map(q => T + (H - T - B) * (1 - q / vmax));
+    wireLine(el, m, i => ({ head: dateLong(new Date(cStart.getTime() + i * 864e5)), rows: [{ v: nf(st.cDaily[i], 0), l: L.cop, c: accent() }] }));
+  }
+  function wireMap() {
+    const el = $('#c-map'); if (!el) return; const cnt = {}; st.countries.forEach(c => { cnt[c[0]] = c[1]; });
+    el.addEventListener('pointermove', e => { const c = e.target.getAttribute && e.target.getAttribute('data-c'); if (!c) return hideTip(); showTip(e.clientX, e.clientY, regionName(c), [{ v: nf(cnt[c], 0), l: L.cop, c: accent() }]); });
+    el.addEventListener('pointerleave', hideTip);
+  }
+  function drawProj() {
+    const el = $('#c-proj'); if (!el) return;
+    const rMe = +el.dataset.rme, rSpx = +el.dataset.rspx, n = +el.dataset.years, rate = +($('#rate') ? $('#rate').value : rMe);
+    const ser = r => Array.from({ length: n + 1 }, (_, i) => amount * Math.pow(1 + r / 100, i));
+    el.innerHTML = KKCharts.lines({ W: el.clientWidth || 1000, label: el.getAttribute('aria-label') || '', series: [{ values: ser(rate), cls: '--accent' }, { values: ser(rSpx), cls: '--bench' }, { values: ser(7), cls: '--pos' }], fmtAxis: q => q === 0 ? '$0' : '$' + nf(q / 1000, q < 10000 ? 1 : 0) + 'K', fmtEnd: q => usd(q) }).svg;
+    const line = $('#proj-line'), ro = $('#rate-out');
+    if (ro) ro.textContent = nf(rate, 1) + '%';
+    if (line) line.textContent = fill(el.dataset.tpl, { amount: usd(amount), rate: nf(rate, 1) + '%', v: usd(amount * Math.pow(1 + rate / 100, n)), n: n, rateS: nf(rSpx, 1) + '%', vS: usd(amount * Math.pow(1 + rSpx / 100, n)), vC: usd(amount * Math.pow(1.07, n)) });
+  }
+  const projEl = $('#c-proj');
+  if (projEl) {
+    const rate = $('#rate'); if (rate) rate.addEventListener('input', drawProj);
+    document.querySelectorAll('[data-years]').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('[data-years]').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); projEl.dataset.years = b.dataset.years; drawProj(); }));
+    document.querySelectorAll('[data-rate]').forEach(b => b.addEventListener('click', () => { if (rate) { rate.value = b.dataset.rate; drawProj(); } }));
+    const det = $('#proj'); if (det) det.addEventListener('toggle', () => { if (det.open) drawProj(); });
+  }
+  function drawAll() { drawGrowth(); drawYears(); drawCopiers(); if ($('#proj') && $('#proj').open) drawProj(); }
+  drawAll(); wireMap();
+  let rt, lastW = window.innerWidth;
+  window.addEventListener('resize', () => { if (window.innerWidth === lastW) return; lastW = window.innerWidth; clearTimeout(rt); rt = setTimeout(drawAll, 150); });
+  if (amtEl) { let at; amtEl.addEventListener('input', () => { clearTimeout(at); at = setTimeout(() => { const v = Math.max(100, Math.min(1e8, +amtEl.value || 0)); if (v !== amount) { amount = v; drawGrowth(); if ($('#proj') && $('#proj').open) drawProj(); } }, 200); }); }
+})();
+</script></body></html>
